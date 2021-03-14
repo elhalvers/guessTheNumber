@@ -19,6 +19,7 @@
 //Generate a random number between 1 and 20 and save it in the secretNumber variable
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
+let highScore = 0;
 
 // add 'click' event listener to the 'check' button and when clicked run the function
 //the user's guess is stored in the 'guess' variable
@@ -37,6 +38,11 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('body').style.backgroundColor = '#60b347';
     document.querySelector('.number').style.width = '30rem';
     document.querySelector('.number').textContent = secretNumber;
+
+    if (score > highScore) {
+      highScore = score;
+      document.querySelector('.highscore').textContent = highScore;
+    }
 
     // When gues is to high
   } else if (guess > secretNumber) {
