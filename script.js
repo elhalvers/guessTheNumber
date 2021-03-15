@@ -2,18 +2,6 @@
 
 //Section 7: JavaScript in the Browser: DOM and Events Fundamentals
 
-// console.log(document.querySelector('.message').textContent);
-
-// document.querySelector('.message').textContent = '🎉 Correct Number';
-
-// console.log(document.querySelector('.message').textContent);
-
-// document.querySelector('.number').textContent = 13;
-// document.querySelector('.score').textContent = 10;
-
-// document.querySelector('.guess').value = '22';
-// console.log(document.querySelector('.guess').value);
-
 // Guess My Number! Game logic
 //Generate a random number between 1 and 20 and save it in the secretNumber variable
 //set state variables and display functions
@@ -66,7 +54,7 @@ document.querySelector('.check').addEventListener('click', function () {
       displaySecretNumber(secretNumber);
     }
   }
-
+  // When user clicks the 'Again' button - Resets the game but keeps high score
   document.querySelector('.again').addEventListener('click', function () {
     secretNumber = Math.trunc(Math.random() * 20) + 1;
     score = 20;
